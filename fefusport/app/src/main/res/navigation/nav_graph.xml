@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/activityListFragment">
+
+    <fragment
+        android:id="@+id/activityListFragment"
+        android:name="com.example.fefusport.ui.ActivityListFragment"
+        android:label="Activity List"
+        tools:layout="@layout/fragment_activity">
+        <action
+            android:id="@+id/action_activityListFragment_to_newActivityFragment"
+            app:destination="@id/newActivityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newActivityFragment"
+        android:name="com.example.fefusport.ui.NewActivityFragment"
+        android:label="New Activity"
+        tools:layout="@layout/fragment_new_activity" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.fefusport.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.fefusport.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+
+</navigation> 

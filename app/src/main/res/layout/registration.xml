@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_light_blue_gradient"
+        android:fitsSystemWindows="true">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@android:color/transparent"
+            android:importantForAccessibility="no"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/enter"
+            app:layout_constraintBottom_toBottomOf="@id/enter" />
+
+        <TextView
+            android:id="@+id/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Регистрация"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="24dp"
+            android:hint="Логин"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/back"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary_blue"
+                android:inputType="textPersonName"
+                android:textColor="@color/grey"
+                android:textColorHighlight="@color/primary_blue"
+                android:textColorHint="@color/primary_blue"
+                android:textColorLink="#63D3E4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nicknameInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:hint="Имя"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/loginInputLayout"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nicknameInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary_blue"
+                android:inputType="textPersonName"
+                android:textColor="@color/grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:hint="Возраст"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/nicknameInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ageInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary_blue"
+                android:inputType="number"
+                android:textColor="@color/grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            app:boxStrokeColor="@color/black"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/ageInputLayout"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary_blue"
+                android:inputType="textPassword"
+                android:textColor="@color/grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmPasswordInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Повторите пароль"
+            app:boxStrokeColor="@color/black"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/passwordInputLayout"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPasswordInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary_blue"
+                android:inputType="textPassword"
+                android:textColor="@color/grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пол"
+            app:layout_constraintTop_toBottomOf="@id/confirmPasswordInputLayout"
+            android:layout_marginTop="24dp"
+            android:textSize="27sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/confirmPasswordInputLayout"
+            tools:ignore="HardcodedText" />
+
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sex"
+            app:layout_constraintStart_toStartOf="@id/sex"
+            android:layout_marginTop="24dp">
+            <RadioButton
+                android:id="@+id/maleRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мужской"
+                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:buttonTint="@color/grey"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/femaleRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Женский"
+                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:buttonTint="@color/grey"
+                android:layout_marginTop="12dp"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/otherRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Другое"
+                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:buttonTint="@color/grey"
+                android:layout_marginTop="12dp"
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/primary_blue"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="true"
+            android:paddingVertical="12dp"
+            android:text="Зарегистрироваться"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderGroup"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/consentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/registration_hint"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/button"
+            app:layout_constraintStart_toStartOf="@id/button"
+            app:layout_constraintTop_toBottomOf="@id/button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

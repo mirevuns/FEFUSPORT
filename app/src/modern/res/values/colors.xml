@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="modern_canvas">#040C1E</color>
+    <color name="modern_surface">#0B1C33</color>
+    <color name="modern_surface_alt">#122544</color>
+    <color name="modern_card">#182C4F</color>
+    <color name="modern_card_accent">#203A67</color>
+    <color name="modern_primary">#4A90E2</color>
+    <color name="modern_primary_dark">#2E7BD6</color>
+    <color name="modern_secondary">#FF7A18</color>
+    <color name="modern_secondary_dark">#CE5900</color>
+    <color name="modern_text_primary">#F3F7FF</color>
+    <color name="modern_text_muted">#94A8C6</color>
+    <color name="modern_stroke">#2C3F60</color>
+    <color name="modern_success">#7DFF8E</color>
+    <color name="modern_warning">#FFD166</color>
+    <color name="modern_glass">#80FFFFFF</color>
+    <color name="modern_chip_bg">#1D2E4C</color>
+</resources>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Fefusport" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/modern_primary</item>
+        <item name="colorOnPrimary">@color/modern_canvas</item>
+        <item name="colorSecondary">@color/modern_secondary</item>
+        <item name="colorOnSecondary">@color/modern_text_primary</item>
+        <item name="android:colorBackground">@color/modern_canvas</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/modern_canvas</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@drawable/bg_modern_gradient</item>
+        <item name="materialButtonStyle">@style/Fefusport.ModernButton</item>
+        <item name="textInputStyle">@style/Fefusport.ModernTextField</item>
+        <item name="chipStyle">@style/Fefusport.ModernChip</item>
+        <item name="bottomNavigationStyle">@style/Fefusport.BottomNavigation</item>
+        <item name="tabStyle">@style/Fefusport.ModernTab</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+</resources>
+

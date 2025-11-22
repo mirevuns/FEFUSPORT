@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fefusport">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/app_icon"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:theme="@style/Theme.Fefusport"
+        tools:replace="android:icon,android:roundIcon" />
+
+</manifest>
+

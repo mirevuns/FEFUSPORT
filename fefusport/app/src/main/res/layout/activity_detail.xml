@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"> 
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/purple_700" />
+
+    <TextView
+        android:id="@+id/activityType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Велосипед 🚲"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+         />
+
+    <TextView
+        android:id="@+id/activityDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14.32 км"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/activityType"
+        app:layout_constraintTop_toBottomOf="@id/activityType" />
+
+    <TextView
+        android:id="@+id/activityDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 ч 42 мин"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/activityDistance"
+        app:layout_constraintTop_toBottomOf="@id/activityDistance" />
+
+    <TextView
+        android:id="@+id/activityTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Старт 14:49 — Финиш 16:31"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/activityDuration"
+        app:layout_constraintTop_toBottomOf="@id/activityDuration" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Комментарий"
+        app:layout_constraintTop_toBottomOf="@id/activityTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@id/shareButton"
+        app:layout_constraintTop_toTopOf="@id/backButton"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        android:contentDescription="Удалить тренировку"
+        app:tint="@color/purple_700" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_share"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backButton"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        android:contentDescription="Поделиться тренировкой"
+        app:tint="@color/purple_700" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

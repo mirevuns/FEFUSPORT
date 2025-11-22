@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_light_blue_gradient"
+    android:padding="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ownerAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/person"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/arrow_back"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/green"/>
+
+    <LinearLayout
+        android:id="@+id/userInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/ownerAvatar"
+        app:layout_constraintEnd_toStartOf="@id/shareButton"
+        app:layout_constraintTop_toTopOf="@id/ownerAvatar"
+        app:layout_constraintBottom_toBottomOf="@id/ownerAvatar">
+
+        <TextView
+            android:id="@+id/ownerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Иван Иванов"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/activityTypeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Велосипед"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activityType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Велотренировка"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ownerAvatar" />
+
+    <TextView
+        android:id="@+id/activityDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="14.32 км"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityType" />
+
+    <TextView
+        android:id="@+id/activityDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 ч 42 мин"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/activityDistance"
+        app:layout_constraintTop_toBottomOf="@id/activityDistance" />
+
+    <TextView
+        android:id="@+id/activityTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14:49 — 16:31"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/activityDuration"
+        app:layout_constraintTop_toBottomOf="@id/activityDuration" />
+
+    <LinearLayout
+        android:id="@+id/ratingSummary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityTime">
+
+        <TextView
+            android:id="@+id/averageRatingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RatingBar
+            android:id="@+id/averageRatingBar"
+            style="?attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/feedbackCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="0 отзывов"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Комментарий"
+        app:layout_constraintTop_toBottomOf="@id/ratingSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="3"
+            android:maxLines="10"
+            android:gravity="top|start"
+            android:scrollbars="vertical" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/ratingInputContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/commentInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оценка:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+
+        <RatingBar
+            android:id="@+id/userRatingBar"
+            style="?attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:rating="0"
+            android:isIndicator="false"
+            android:scaleX="1.15"
+            android:scaleY="1.15"
+            android:layout_marginStart="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sendFeedbackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оставить отзыв"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feedbackRecyclerView"
+        android:layout_marginTop="24dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_feedback"
+        app:layout_constraintTop_toBottomOf="@id/ratingInputContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+        
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@id/shareButton"
+        app:layout_constraintTop_toTopOf="@id/backButton"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        android:contentDescription="Удалить тренировку"
+        app:tint="@color/green" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_share"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backButton"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        android:contentDescription="Поделиться тренировкой"
+        app:tint="@color/green" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

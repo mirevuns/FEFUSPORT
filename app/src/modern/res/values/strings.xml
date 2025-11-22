@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FefuFlow</string>
+    <string name="modern_welcome_title">Создавай движение</string>
+    <string name="modern_welcome_subtitle">Твоя активность превращается в яркие истории, понятную аналитику и зажигательные челленджи.</string>
+    <string name="modern_login_title">Рады видеть снова</string>
+    <string name="modern_login_action">Войти в аккаунт</string>
+    <string name="modern_registration_title">Присоединяйся к волне</string>
+    <string name="modern_registration_action">Создать профиль</string>
+    <string name="modern_profile_title">Твой космический профиль</string>
+    <string name="modern_activity_headline">Трек активности</string>
+    <string name="modern_activity_subtitle">Обновлено пару секунд назад</string>
+    <string name="modern_have_account">У меня уже есть аккаунт</string>
+    <string name="modern_back">Назад</string>
+</resources>
+

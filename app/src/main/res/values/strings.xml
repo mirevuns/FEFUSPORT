@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FefuSport</string>
+    <string name="title_activity_registration">registration</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_main">Main</string>
+    <string name="registration_hint">Нажимая кнопку «Зарегистрироваться», вы соглашаетесь с правилами и подтверждаете, что являетесь студентом ДВФУ.</string>
+    <string name="activity_start_finish_format">%1$s — %2$s</string>
+    <string name="login_hint">Введите данные студенческого профиля ДВФУ</string>
+    <string name="field_required">Поле обязательно для заполнения</string>
+    <string name="passwords_not_match">Пароли не совпадают</string>
+    <string name="invalid_credentials">Неверный логин или пароль</string>
+    <string name="user_exists">Пользователь с таким логином уже зарегистрирован</string>
+    <string name="profile_updated">Профиль обновлён</string>
+    <string name="avatar_change">Сменить фото</string>
+    <plurals name="feedback_count">
+        <item quantity="one">%d отзыв</item>
+        <item quantity="few">%d отзыва</item>
+        <item quantity="many">%d отзывов</item>
+        <item quantity="other">%d отзывов</item>
+    </plurals>
+</resources>

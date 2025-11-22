@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fefusport">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fefusport"
+        tools:targetApi="31">
+        <activity
+            android:name=".Main"
+            android:exported="false"
+            android:theme="@style/Theme.Fefusport" />
+        <activity
+            android:name=".ui.welcomes.Login"
+            android:exported="false"
+            android:theme="@style/Theme.Fefusport" />
+        <activity
+            android:name=".ui.welcomes.Registration"
+            android:exported="false"
+            android:theme="@style/Theme.Fefusport" />
+        <activity
+            android:name=".ui.ActivityDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Fefusport" />
+        <activity
+            android:name=".ui.welcomes.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Fefusport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
